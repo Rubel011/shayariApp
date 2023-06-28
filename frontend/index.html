@@ -40,10 +40,28 @@
       border: 1px solid #ccc;
       background-color: #f9f9f9;
     }
+
+    @media all and (min-width:100px) and (max-width: 800px) {
+      .title{
+        font-size: 7rem;
+      }
+      .form-container{
+       max-width: 100%;
+      }
+      .form-container input[type="text"]{
+
+      }
+      .form-container button {
+
+      }
+      .result-container{
+
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Shayari App</h1>
+  <h1 class="title">Shayari App</h1>
 
   <div class="form-container">
     <input type="text" id="keywordInput" placeholder="Enter a keyword">
@@ -51,14 +69,14 @@
   </div>
 
   <div class="result-container">
-    <p id="shayariResult"></p>
+    <p id="shayariResult">...Here your Shayari will be visable</p>
   </div>
 
   <script>
     async function generateShayari() {
       const keywordInput = document.getElementById('keywordInput');
       const shayariResult = document.getElementById('shayariResult');
-      
+      shayariResult.textContent ="....Wait for a minute .It will take some time to fetch your shayari";
       const response = await fetch(`https://shayariapp.onrender.com/generate-shayari?keyword=${keywordInput.value}`);
 
       const data = await response.json();
