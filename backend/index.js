@@ -16,13 +16,13 @@ const openai = new OpenAIApi(configuration);
 const history = [];
 // API endpoint for generating Shayari
 app.get('/generate-shayari', async (req, res) => {
-    const user_input = `Write a Shayari about ${req.query.keyword}.i do not understand hindi alphabets`;
+    const user_input = `Write a Shayari about ${req.query.keyword}.Write in hindi using english alphabats`;
     console.log(user_input);
         const messages = [];
-        for (const [input_text, completion_text] of history) {
-          messages.push({ role: "user", content: input_text });
-          messages.push({ role: "assistant", content: completion_text });
-        }
+        // for (const [input_text, completion_text] of history) {
+        //   messages.push({ role: "user", content: input_text });
+        //   messages.push({ role: "assistant", content: completion_text });
+        // }
     
         messages.push({ role: "user", content: user_input });
 
@@ -30,7 +30,7 @@ app.get('/generate-shayari', async (req, res) => {
  
 
         // Customize this based on your desired prompt and completion settings
-// console.log(messages);
+console.log(history);
         const completion = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             messages: messages,
@@ -38,7 +38,7 @@ app.get('/generate-shayari', async (req, res) => {
 
         const completion_text = completion.data.choices[0].message.content;
         console.log(completion_text);
-        history.push([user_input, completion_text]);
+        // history.push([user_input, completion_text]);
 
 
         res.json({ shayari :completion_text});
