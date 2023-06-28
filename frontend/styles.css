@@ -1,58 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin-top: 15%
+}
+
+h1 {
+  color: #333;
+  /* font-size:xx-large; */
+}
+
+.form-container {
+  width: 80%;
+  margin: auto;
   
-  .container {
-    max-width: 400px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 5px;
+}
+
+.form-container input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius:5px;
+  border: 1px solid #ccc;  
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-container button {
+  width: 80%;
+  padding: 10px;
+  display: block;
+  margin: auto;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.result-container {
+  width: 80%;
+  margin: auto;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* @media all and (min-width:100px) and (max-width: 800px) {
+  .title{
+    font-size: 7rem;
   }
-  
-  .title {
-    color: #333;
-    text-align: center;
-    margin-top: 0;
+  .form-container{
+   max-width: 100%;
   }
-  
-  .card {
-    margin-top: 20px;
+  .form-container input[type="text"]{
+
   }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  .form-container button {
+
   }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .result-container{
+
   }
-  
-  p {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 900px) {
-    .container {
-      max-width: 90%;
-    }
-  }
-  
+} */

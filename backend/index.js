@@ -16,7 +16,7 @@ const openai = new OpenAIApi(configuration);
 const history = [];
 // API endpoint for generating Shayari
 app.get('/generate-shayari', async (req, res) => {
-    const user_input = `Write a Shayari about ${req.query.keyword}.Write in hindi using english alphabats or in bengali`;
+    const user_input = `Write a Shayari about ${req.query.keyword}.Write in hindi using english alphabats`;
     console.log(user_input);
         const messages = [];
         // for (const [input_text, completion_text] of history) {
